@@ -1,0 +1,129 @@
+body {
+    font-size: 25px;
+    line-height: 1.5;
+
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:  "a b"
+                          "c c"
+                          "d e"
+                          "f g";
+    background-color: purple;
+  }
+
+
+.cookie-counter {
+  font-size: 4em;
+  font-weight: 900;
+  grid-area: a;
+  background-color: red;
+  text-align: center;
+  border-radius: 30px;
+  margin: 30px;
+  border: solid;
+
+}
+
+.make-cookies-button{
+  grid-area: b;
+  background-color: #35a818;
+  border-radius: 50px;
+  font-size: 3em;
+  border: solid;
+  font-weight: 400;
+  margin: 10px;
+}
+
+.make-cookies-button:hover {
+  background-color: #2ebf23;
+
+}
+
+
+.shop{
+  grid-area: c;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  font-size: 3em;
+
+}
+
+.click-power {
+  grid-area: d;
+  background-color: lightblue;
+  border-color: black;
+  border: solid;
+  margin: 10px;
+  font-size: 1.2em;
+  line-height: normal;
+  padding: 15px;
+  border-radius: 25px;
+
+
+
+}
+
+.grandmas{
+  grid-area: e;
+  background-color: lightblue;
+  border-color: black;
+  border: solid;
+  margin: 10px;
+  font-size: 1.2em;
+  line-height: normal;
+  padding: 15px;
+  border-radius: 25px;
+
+
+}
+
+.facility {
+  grid-area: f;
+  background-color: lightblue;
+  border-color: black;
+  border: solid;
+  margin: 10px;
+  font-size: 1.2em;
+  line-height: normal;
+  padding: 15px;
+  border-radius: 25px;
+
+
+
+}
+
+.colony {
+  grid-area: g;
+  background-color: lightblue;
+  border-color: black;
+  border: solid;
+  margin: 10px;
+  font-size: 1.2em;
+  line-height: normal;
+  padding: 15px;
+  border-radius: 25px;
+
+
+}
+
+.buy-button {
+  font-size: 30px;
+  border-radius: 30px;
+  background-color: #35a818;
+  border: solid;
+  margin-left: 20px;
+
+}
+
+.buy-button:hover {
+  background-color: #2ebf23;
+
+}
+
+
+.item-name {
+  font-size: 1.3em;
+  font-weight: bold;
+}
