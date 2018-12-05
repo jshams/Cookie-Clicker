@@ -10,7 +10,6 @@ let cookieCount = 0;
 //declare DOM variables
 let cookieCounter = document.getElementById('cookie-counter');
 cookieCounter.innerHTML = cookieCount;
-let cookieClicker = document.getElementById('cookie-clicker');
 
 cookieClicker.addEventListener("click", function() {
   cookieCount = cookieCount + clickPower;
