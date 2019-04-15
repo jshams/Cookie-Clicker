@@ -11,13 +11,13 @@ let cookieCount = 0;
 let cookieCounter = document.getElementById('cookie-counter');
 cookieCounter.innerHTML = cookieCount;
 
-cookieClicker.addEventListener("click", function() {
+cookieClicker.addEventListener("click", function () {
   cookieCount = cookieCount + clickPower;
   refreshCookieCount()
 })
 
-let refreshCookieCount = function() {
-cookieCounter.innerHTML = cookieCount;
+let refreshCookieCount = function () {
+  cookieCounter.innerHTML = cookieCount;
 }
 
 /********************************
@@ -39,14 +39,14 @@ let clickPowerMultiple = document.getElementById('click-power-multiple');
 
 //everytime a user clicks the button, their cookies are increased by the value of their clickPower.
 
-let refreshPowerClick = function() {
-clickPowerLevel.innerHTML = clickPowerLevelNumber
-clickPowerPrice.innerHTML = clickPowerPriceAmount;
-clickPowerMultiple.innerHTML = clickPower;
+let refreshPowerClick = function () {
+  clickPowerLevel.innerHTML = clickPowerLevelNumber
+  clickPowerPrice.innerHTML = clickPowerPriceAmount;
+  clickPowerMultiple.innerHTML = clickPower;
 }
 
 //Buy click power
-buyClickPower.addEventListener("click", function() {
+buyClickPower.addEventListener("click", function () {
   if (cookieCount >= clickPowerPriceAmount) {
     console.log("Item succesfully Bought");
   } else {
@@ -97,11 +97,11 @@ let grandmaLevel = document.getElementById('grandma-level');
 let grandmaMultiple = document.getElementById('grandma-multiple');
 
 //buy a grandma
-buyGrandma.addEventListener("click", function() {
+buyGrandma.addEventListener("click", function () {
   //make sure we have enough cookies and subtract our cookies from the price
   if (cookieCount >= grandmaPriceAmount) {
     // Subtract cookies from the price of the item.
-    cookieCount +=  - grandmaPriceAmount;
+    cookieCount += - grandmaPriceAmount;
     refreshCookieCount()
     //upgrade power level
     grandmaLevelNumber += 1;
@@ -118,15 +118,15 @@ buyGrandma.addEventListener("click", function() {
   }
 })
 
-let autoGrandmaStart = function() {
-  let grandmaInt = window.setInterval(function(){
+let autoGrandmaStart = function () {
+  let grandmaInt = window.setInterval(function () {
     cookieCount += grandmaPower;
     refreshCookieCount();
   }, 1000);
 }
 
 
-let refreshGrandma = function() {
+let refreshGrandma = function () {
   grandmaLevel.innerHTML = grandmaLevelNumber
   grandmaPrice.innerHTML = grandmaPriceAmount;
   grandmaMultiple.innerHTML = grandmaPower;
@@ -152,12 +152,12 @@ let facilityLevel = document.getElementById('facility-level');
 let facilityMultiple = document.getElementById('facility-multiple');
 
 //buy a facility
-buyFacility.addEventListener("click", function() {
-    //set autoLoop to false
-    facilityAuto = false;
+buyFacility.addEventListener("click", function () {
+  //set autoLoop to false
+  facilityAuto = false;
 
-    //make sure we have enough cookies
-    if (cookieCount >= facilityPriceAmount) {
+  //make sure we have enough cookies
+  if (cookieCount >= facilityPriceAmount) {
     cookieCount -= facilityPriceAmount;
     refreshCookieCount()
     //upgrade power level
@@ -172,20 +172,20 @@ buyFacility.addEventListener("click", function() {
     //refresh shop item
     refreshFacility();
 
-    }
+  }
 })
 
 //game loop
-let autoFacilityStart = function() {
-    let facilityInt = window.setInterval(function(){
-      cookieCount += facilityPower;
-      refreshCookieCount();
-    }, 1000);
+let autoFacilityStart = function () {
+  let facilityInt = window.setInterval(function () {
+    cookieCount += facilityPower;
+    refreshCookieCount();
+  }, 1000);
 }
 
 
 //refresh shop
-let refreshFacility = function() {
+let refreshFacility = function () {
   facilityLevel.innerHTML = facilityLevelNumber
   facilityPrice.innerHTML = facilityPriceAmount;
   facilityMultiple.innerHTML = facilityPower - 600;
@@ -212,12 +212,12 @@ let colonyLevel = document.getElementById('colony-level');
 let colonyMultiple = document.getElementById('colony-multiple');
 
 //buy a colony
-buyColony.addEventListener("click", function() {
-    //set autoLoop to false
-    colonyAuto = false;
+buyColony.addEventListener("click", function () {
+  //set autoLoop to false
+  colonyAuto = false;
 
-    //make sure we have enough cookies
-    if (cookieCount >= colonyPriceAmount) {
+  //make sure we have enough cookies
+  if (cookieCount >= colonyPriceAmount) {
     cookieCount -= colonyPriceAmount;
     refreshCookieCount()
     //upgrade power level
@@ -232,20 +232,20 @@ buyColony.addEventListener("click", function() {
     //refresh shop item
     refreshColony();
 
-    }
+  }
 })
 
 //game loop
-let autoColonyStart = function() {
-    let colonyInt = window.setInterval(function(){
-      cookieCount += colonyPower;
-      refreshCookieCount();
-    }, 1000);
+let autoColonyStart = function () {
+  let colonyInt = window.setInterval(function () {
+    cookieCount += colonyPower;
+    refreshCookieCount();
+  }, 1000);
 }
 
 
 //refresh shop
-let refreshColony = function() {
+let refreshColony = function () {
   colonyLevel.innerHTML = colonyLevelNumber
   colonyPrice.innerHTML = colonyPriceAmount;
   colonyMultiple.innerHTML = colonyPower - 5000;
