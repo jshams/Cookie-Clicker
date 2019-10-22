@@ -10,6 +10,7 @@ let cookieCount = 0;
 //declare DOM variables
 let cookieCounter = document.getElementById('cookie-counter');
 cookieCounter.innerHTML = cookieCount;
+cookieClicker = document.getElementById('cookie-clicker')
 
 cookieClicker.addEventListener("click", function () {
   cookieCount = cookieCount + clickPower;
@@ -65,8 +66,6 @@ buyClickPower.addEventListener("click", function () {
 
     //update Click Power
     clickPower += 1 * Math.floor(clickPowerLevelNumber * 1.05);
-
-
     clickPowerPriceAmount = Math.floor(clickPowerPriceAmount * 1.33);
 
     //refresh shop item
